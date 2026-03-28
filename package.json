@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tu-usuario/tesslang"
+    "url": "https://github.com/Fran23135/Tesseract-Lang-Syntax-Highlighter-"
   },
   "engines": { "vscode": "^1.75.0" },
   "categories": ["Programming Languages", "Themes"],
