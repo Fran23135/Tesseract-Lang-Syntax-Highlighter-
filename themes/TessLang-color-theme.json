@@ -1,0 +1,102 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "TessLang Dark Modern",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "colors": {
+    "editor.background": "#1F1F1F",
+    "editor.foreground": "#CCCCCC",
+    "activityBar.background": "#181818",
+    "activityBar.border": "#2B2B2B",
+    "activityBar.foreground": "#D7D7D7",
+    "activityBar.inactiveForeground": "#868686",
+    "sideBar.background": "#181818",
+    "sideBar.border": "#2B2B2B",
+    "sideBar.foreground": "#CCCCCC",
+    "statusBar.background": "#181818",
+    "statusBar.border": "#2B2B2B",
+    "statusBar.foreground": "#CCCCCC",
+    "titleBar.activeBackground": "#181818",
+    "titleBar.activeForeground": "#CCCCCC",
+    "titleBar.border": "#2B2B2B",
+    "tab.activeBackground": "#1F1F1F",
+    "tab.inactiveBackground": "#181818",
+    "tab.border": "#2B2B2B",
+    "tab.activeForeground": "#FFFFFF",
+    "tab.inactiveForeground": "#8A8A8A",
+    "editorLineNumber.foreground": "#858585",
+    "editorLineNumber.activeForeground": "#C6C6C6",
+    "editorCursor.foreground": "#AEAFAD",
+    "editor.selectionBackground": "#264F78",
+    "editor.inactiveSelectionBackground": "#3A3D41",
+    "editor.lineHighlightBackground": "#2A2A2A",
+    "editorBracketMatch.background": "#0064001a",
+    "editorBracketMatch.border": "#888888"
+  },
+  "tokenColors": [
+    {
+      "name": "Keywords de control",
+      "scope": "keyword.control.tesslang",
+      "settings": { "foreground": "#C586C0" }
+    },
+    {
+      "name": "Keywords de importación",
+      "scope": "keyword.control.import.tesslang",
+      "settings": { "foreground": "#C586C0" }
+    },
+    {
+      "name": "Nombre de librería en import",
+      "scope": "entity.name.import.tesslang",
+      "settings": { "foreground": "#4EC9B0", "fontStyle": "bold" }
+    },
+    {
+      "name": "Tipos",
+      "scope": "storage.type.tesslang",
+      "settings": { "foreground": "#569CD6" }
+    },
+    {
+      "name": "Funciones built-in",
+      "scope": "support.function.tesslang",
+      "settings": { "foreground": "#DCDCAA" }
+    },
+    {
+      "name": "Llamadas a funciones",
+      "scope": "entity.name.function.tesslang",
+      "settings": { "foreground": "#DCDCAA" }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string.quoted.double.tesslang", "string.quoted.simple.tesslang"],
+      "settings": { "foreground": "#CE9178" }
+    },
+    {
+      "name": "Escape characters",
+      "scope": "constant.character.escape.tesslang",
+      "settings": { "foreground": "#D7BA7D" }
+    },
+    {
+      "name": "Números",
+      "scope": "constant.numeric.tesslang",
+      "settings": { "foreground": "#B5CEA8" }
+    },
+    {
+      "name": "Operadores",
+      "scope": "keyword.operator.tesslang",
+      "settings": { "foreground": "#D4D4D4" }
+    },
+    {
+      "name": "Comentarios",
+      "scope": [
+        "comment.line.double-slash.tesslang",
+        "comment.block.tesslang"
+      ],
+      "settings": { "foreground": "#6A9955", "fontStyle": "italic" }
+    }
+  ],
+  "semanticTokenColors": {
+    "namespace": {
+      "foreground": "#4EC9B0",
+      "bold": true
+    }
+  }
+}

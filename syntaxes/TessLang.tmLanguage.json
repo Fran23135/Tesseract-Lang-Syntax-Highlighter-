@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Tesseract",
+  "patterns": [
+    { "include": "#library_imports" },
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#stringsquote" },
+    { "include": "#numbers" },
+    { "include": "#block_comments" },
+    { "include": "#comments" },
+    { "include": "#operators" },
+    { "include": "#function_calls" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.tesslang",
+          "match": "\\b(function|if|else|return|while|for|perform|switch|break|continue|library|from|use|as|al)\\b"
+        },
+        {
+          "name": "storage.type.tesslang",
+          "match": "\\b(int|string|bool|float|var|const|void)\\b"
+        },
+        {
+          "name": "support.function.tesslang",
+          "match": "\\b(print|read)\\b"
+        }
+      ]
+    },
+    "function_calls": {
+      "name": "entity.name.function.tesslang",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*\\("
+    },
+    "operators": {
+      "name": "keyword.operator.tesslang",
+      "match": "(==|!=|<=|>=|&&|\\|\\||[+\\-*/%=<>!])"
+    },
+    "strings": {
+      "name": "string.quoted.double.tesslang",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        { "name": "constant.character.escape.tesslang", "match": "\\\\." }
+      ]
+    },
+    "stringsquote": {
+      "name": "string.quoted.simple.tesslang",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        { "name": "constant.character.escape.tesslang", "match": "\\\\." }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.tesslang",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "library_imports": {
+      "begin": "\\b(library|from)\\b",
+      "end": "$",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.import.tesslang" }
+      },
+      "patterns": [
+        {
+          "name": "keyword.control.import.tesslang",
+          "match": "\\b(use|as|al)\\b"
+        },
+        {
+          "name": "entity.name.import.tesslang",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment.line.double-slash.tesslang",
+      "begin": "//",
+      "end": "$"
+    },
+    "block_comments": {
+      "name": "comment.block.tesslang",
+      "begin": "/\\*",
+      "end": "\\*/"
+    }
+  },
+  "scopeName": "source.tss"
+}

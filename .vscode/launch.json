@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. Launch Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+      "outFiles": ["${workspaceFolder}/client/out/**/*.js"],
+      "preLaunchTask": "compile"
+    },
+    {
+      "name": "2. Attach Server",
+      "type": "node",
+      "request": "attach",
+      "port": 6009,
+      "restart": true,
+      "timeout": 15000,
+      "outFiles": ["${workspaceFolder}/server/out/**/*.js"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Client + Server (Full Debug)",
+      "configurations": [
+        "1. Launch Extension",
+        "2. Attach Server"
+      ],
+      "stopAll": true            // 👈 si uno para, para el otro también
+    }
+  ]
+}
