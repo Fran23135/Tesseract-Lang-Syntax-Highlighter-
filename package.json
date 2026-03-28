@@ -1,6 +1,6 @@
 {
   "name": "tesslang",
-  "displayName": "TessLang",
+  "displayName": "Tesseract Language Syntax Highlighter",
   "description": "Syntax highlighting and language server for TessLang (.tss)",
   "version": "1.0.0",
   "publisher": "Fran23135dev",
